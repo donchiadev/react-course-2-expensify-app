@@ -7,7 +7,7 @@ module.exports = (env) => {
     return {
         entry: './src/app.js',
         output: {
-            path: join(__dirname, 'public'),
+            path: join(__dirname, 'public/dist'),
             filename: 'bundle.js'
         },
         module: {
@@ -40,6 +40,7 @@ module.exports = (env) => {
         devtool: isProduction ? 'source-map' : 'inline-source-map',
         devServer: {
             contentBase: join(__dirname, 'public'),
+            publicPath: '/dist/',
             historyApiFallback: true
         }
     }
