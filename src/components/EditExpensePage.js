@@ -6,12 +6,7 @@ import { editExpense, removeExpense } from '../actions/expenses';
 export class EditExpensePage extends React.Component {
 
     onSubmit = (expense) => {
-        this.props.editExpense(this.props.expense.id, {
-            description: expense.description,
-            note: expense.note,
-            amount: expense.amount ,
-            createdAt: expense.createdAt
-        })
+        this.props.editExpense(this.props.expense.id, expense)
         this.props.history.push('/')
     }
 
@@ -36,7 +31,7 @@ export class EditExpensePage extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    editExpense: (expense) => dispatch(editExpense(id, expense)),
+    editExpense: (id, expense) => dispatch(editExpense(id, expense)),
     removeExpense: (id) => dispatch(removeExpense({ id }))
 })
 
