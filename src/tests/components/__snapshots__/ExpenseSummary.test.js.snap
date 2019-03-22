@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ExpenseSummary 1`] = `
+<div>
+  <h3>
+    There are undefined visible expenses.
+  </h3>
+  <h3>
+    Expenses Total is: 
+    $0.00
+  </h3>
+</div>
+`;
+
+exports[`should render ExpenseSummary with 0 expenses 1`] = `
+<div>
+  <h3>
+    There are 0 visible expenses.
+  </h3>
+  <h3>
+    Expenses Total is: 
+    $0.00
+  </h3>
+</div>
+`;
+
+exports[`should render ExpenseSummary with 1 expense 1`] = `
+<div>
+  <h3>
+    There is 1 visible expense.
+  </h3>
+  <h3>
+    Expenses Total is: 
+    $1,095.00
+  </h3>
+</div>
+`;
+
+exports[`should render ExpenseSummary with expenses 1`] = `
+<div>
+  <h3>
+    There are 3 visible expenses.
+  </h3>
+  <h3>
+    Expenses Total is: 
+    $1,945.00
+  </h3>
+</div>
+`;
